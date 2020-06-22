@@ -1,0 +1,3 @@
+[run]
+source = grapevine
+omit = grapevine/test*
