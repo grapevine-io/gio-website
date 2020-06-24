@@ -27,3 +27,7 @@ Getting Started
 - Run your project.
 
     env/bin/pserve development.ini
+    
+- Activate virtual environment: 
+    source venv/bin/activate
+
