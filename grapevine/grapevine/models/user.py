@@ -1,6 +1,5 @@
-import datetime  # <- will be used to set default dates on models
-# <- we need to import our sqlalchemy metadata from which model classes will inherit
-from pyramid_blogr.models.meta import Base
+import datetime
+from grapevine.models.meta import Base
 from sqlalchemy import (
     Column,
     Integer,
