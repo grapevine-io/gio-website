@@ -18,7 +18,7 @@ def my_view(request):
 
 
 @view_config(route_name='register',
-             renderer='pyramid_blogr:templates/register.jinja2')
+             renderer='grapevine:templates/register.jinja2')
 def register(request):
     form = RegistrationForm(request.POST)
     if request.method == 'POST' and form.validate():
