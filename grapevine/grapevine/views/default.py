@@ -24,6 +24,7 @@ def register(request):
     form = RegistrationForm(request.POST)
     if request.method == 'POST' and form.validate():
         new_user = User(name=form.username.data)
+        new_user.set_password(form.password.data.encode('utf8'))
         request.dbsession.add(new_user)
         return HTTPFound(location=request.route_url('home'))
     return {'form': form}
