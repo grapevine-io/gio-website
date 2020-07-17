@@ -10,6 +10,7 @@ from sqlalchemy.exc import DBAPIError
 from .. import models
 from ..forms import RegistrationForm
 from ..models.user import User
+import pdb
 
 
 @view_config(route_name='home', renderer='../templates/mytemplate.jinja2')
@@ -18,7 +19,7 @@ def my_view(request):
 
 
 @view_config(route_name='register',
-             renderer='pyramid_blogr:templates/register.jinja2')
+             renderer='../templates/register.jinja2')
 def register(request):
     form = RegistrationForm(request.POST)
     if request.method == 'POST' and form.validate():
